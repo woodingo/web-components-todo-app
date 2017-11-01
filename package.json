@@ -16,7 +16,6 @@
     "url": "https://github.com/woodingo/web-components-todo-app/issues"
   },
   "homepage": "https://github.com/woodingo/web-components-todo-app#readme",
-  "dependencies": {
-    "express": "^4.16.2"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
