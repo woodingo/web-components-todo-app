@@ -1,0 +1,19 @@
+{
+  "name": "web-components-todo-app",
+  "version": "1.0.0",
+  "description": "Web components experimental SPA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woodingo/web-components-todo-app.git"
+  },
+  "author": "Woody Just",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woodingo/web-components-todo-app/issues"
+  },
+  "homepage": "https://github.com/woodingo/web-components-todo-app#readme"
+}
