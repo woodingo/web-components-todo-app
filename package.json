@@ -4,7 +4,8 @@
   "description": "Web components experimental SPA",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app/server.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,7 @@
   },
   "homepage": "https://github.com/woodingo/web-components-todo-app#readme",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "static-server": "^2.0.6"
+  }
 }
