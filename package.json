@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "gulp && node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,9 @@
   "homepage": "https://github.com/woodingo/web-components-todo-app#readme",
   "dependencies": {},
   "devDependencies": {
-    "static-server": "^2.0.6"
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "http": "0.0.0",
+    "st": "^1.2.2"
   }
 }

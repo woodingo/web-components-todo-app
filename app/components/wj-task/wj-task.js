@@ -1,8 +1,10 @@
+
 ! function() {
+  var importedDoc = document.currentScript.ownerDocument;
   class wjTask extends HTMLElement {
     constructor() {
       super();
-      let template =  document.currentScript.ownerDocument.getElementById('tmpl');
+      let template =  importedDoc.getElementById('tmpl');
       let clone = document.importNode(template.content, true);
       this.attachShadow({mode: 'open'}).appendChild(clone);
       this.clickHandler = this.clickHandler.bind(this);

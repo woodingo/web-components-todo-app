@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
   <link rel="import" href="components/wj-task/wj-task.html">
+  <link rel="import" href="components/wj-create-input/wj-create-input.html">
   <title>Web Components TODO-Application</title>
 </head>
 <body>
@@ -19,7 +20,10 @@
     <hr>
   </header>
   <main>
-    <wj-task>Hello, world!</wj-task>
+    <wj-create-input data-task-container='.list'></wj-create-input>
+    <div class="list">
+      <wj-task>Hello, world!</wj-task>
+    </div>
   </main>
   <footer></footer>
 </body>
