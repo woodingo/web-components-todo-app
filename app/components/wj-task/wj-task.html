@@ -9,6 +9,11 @@
 
       :host {
         display: block;
+        transition: background-color, .3s 0s;
+      }
+
+      :host(:hover) {
+        transition: background-color, .3s 0s; 
       }
       
       .row {
@@ -19,19 +24,30 @@
       .checkbox {
         width: 20px;
         height: 20px;
-        background: var(--checkboxes-color, gray);
+        background-color: var(--checkboxes-bgcolor, gray);
         margin-right: 10px;
         border-radius: 50%;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: background-color .3s 0s;
       }
 
       .checkbox svg {
         fill: white;
         width: 10px;
         height: 10px;
+        opacity: 0
+      }
+
+      .checkbox:hover {
+        background-color: var(--checkboxes-bgcolor-hover, gray);
+        transition: background-color .3s 0s;
+      }
+
+      .checkbox:hover svg {
+        opacity: 1
       }
 
       .text {

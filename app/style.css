@@ -1,8 +1,10 @@
 /* theme */
 :root {
-  --text-color: #333;
-  --checkboxes-color: red;
-  --bg-color: #f9f9f9;
+  --text-color: dimgray;
+  --checkboxes-bgcolor: lightsteelblue;
+  --checkboxes-bgcolor-hover: lightslategray;
+  --border-color: #b3b3d41a;
+  --bg-color: ghostwhite;
 }
 
 /* base */
@@ -18,6 +20,7 @@ h1 {
 
 .subtitle {
   font-size: 0.5em;
+  margin-top: 0.5em;
 }
 
 body > header,
@@ -25,4 +28,24 @@ body > main,
 body > footer {
   margin: 0 auto;
   max-width: 600px;
+}
+
+/* create task item */
+wj-create-input {
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+
+/* task */
+wj-task {
+  padding: 1rem 0.7rem;
+}
+
+wj-task + wj-task {
+  border-top: 1px solid var(--border-color, gray);
+}
+
+wj-task:hover {
+  background-color: var(--border-color, gray);
 }
