@@ -7,14 +7,10 @@
       let template =  importedDoc.getElementById('tmpl');
       let clone = document.importNode(template.content, true);
       this.attachShadow({mode: 'open'}).appendChild(clone);
-      this.taskList = [{
-        id: '1',
-        text: 'Тестовая таска'
-      }];
+      this.taskList = [];
     }
 
     set taskList(arr) {
-      console.log(arr);
       this.data = arr;
       if (arr.length) {
         this.drawTasks(arr);
