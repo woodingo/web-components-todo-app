@@ -23,7 +23,7 @@
     disconnectedCallback() {
       this.removeEventListener('click', this.clickHandler);
     }
-
+    
     connectedCallback() {
       // this.classList.add('ready');
     }

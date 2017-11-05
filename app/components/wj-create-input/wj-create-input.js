@@ -18,9 +18,9 @@
         const newTaskContent = this.shadowRoot.querySelector('.input').textContent;
 
         if (newTaskContent) {
-          const newTask = document.createElement('wj-task');
-          newTask.innerHTML = newTaskContent;
-          container.insertBefore(newTask, container.children[0])
+          const newTask = {text: newTaskContent};
+          container.taskList = container.taskList.concat(newTask).reverse();
+          console.dir(container.taskList);
         };
 
         this.shadowRoot.querySelector('.input').textContent = ''

@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
   <link rel="import" href="components/wj-task/wj-task.html">
+  <link rel="import" href="components/wj-task-list/wj-task-list.html">
   <link rel="import" href="components/wj-create-input/wj-create-input.html">
   <title>Web Components TODO-Application</title>
 </head>
@@ -20,11 +21,7 @@
   </header>
   <main>
     <wj-create-input data-task-container='.list'></wj-create-input>
-    <div class="list">
-      <wj-task>Подготовить доклад на FrontCamp</wj-task>
-      <wj-task>Запилить приложуху на Web Components</wj-task>
-      <wj-task>Купить палку</wj-task>
-    </div>
+    <wj-task-list class="list"></wj-task-list>
   </main>
   <footer></footer>
 </body>
