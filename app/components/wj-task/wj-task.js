@@ -12,12 +12,10 @@
     }
 
     clickHandler() {
-      let evt = new Event('alert-box-click', {bubbles: true, composed: true});
-      this.dispatchEvent(evt);
       this.classList.add('done');
       setTimeout(() => {
-        this.parentNode.removeChild(this);
-      }, 1000);
+        deleteTask(this.dataset.id);
+      }, 200);
     }
 
     disconnectedCallback() {

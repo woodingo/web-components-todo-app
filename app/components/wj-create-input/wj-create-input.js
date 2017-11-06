@@ -14,14 +14,15 @@
       if (e.which == 13) {
         e.preventDefault();
 
-        const container = document.querySelector(this.dataset.taskContainer);
-        const newTaskContent = this.shadowRoot.querySelector('.input').textContent;
+        // const container = document.querySelector(this.dataset.taskContainer);
+        // const newTaskContent = this.shadowRoot.querySelector('.input').textContent;
 
-        if (newTaskContent) {
-          const newTask = {text: newTaskContent};
-          container.taskList = container.taskList.concat(newTask).reverse();
-          console.dir(container.taskList);
-        };
+        // if (newTaskContent) {
+        //   const newTask = {id: container.taskList.length, text: newTaskContent};
+        //   container.taskList = [newTask].concat(container.taskList);
+        // };
+
+        createTask(this.shadowRoot.querySelector('.input').textContent);
 
         this.shadowRoot.querySelector('.input').textContent = ''
       }

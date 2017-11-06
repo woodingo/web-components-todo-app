@@ -22,6 +22,7 @@
       }
 
       .checkbox {
+        flex-shrink: 0;
         width: 20px;
         height: 20px;
         background-color: var(--checkboxes-bgcolor, gray);
@@ -66,8 +67,8 @@
 
       :host(.done) {
         animation-name: hide;
-        animation-duration: .5s;
-        animation-delay: .5s;
+        animation-duration: .2s;
+        animation-delay: .3s;
         animation-fill-mode: forwards;
       }
 
@@ -80,7 +81,7 @@
         width: 100%;
         border-top: 1px solid;
         animation-name: strikethrough;
-        animation-duration: .5s;
+        animation-duration: .2s;
       }
 
     </style>
