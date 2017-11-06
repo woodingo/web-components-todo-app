@@ -23,7 +23,7 @@
     }
     
     connectedCallback() {
-      // this.classList.add('ready');
+      this.shadowRoot.querySelector('.text').title = this.textContent;
     }
   }
   window.customElements.define('wj-task', wjTask);
