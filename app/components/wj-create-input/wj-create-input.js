@@ -13,17 +13,7 @@
     pressEnterHandler(e) {
       if (e.which == 13) {
         e.preventDefault();
-
-        // const container = document.querySelector(this.dataset.taskContainer);
-        // const newTaskContent = this.shadowRoot.querySelector('.input').textContent;
-
-        // if (newTaskContent) {
-        //   const newTask = {id: container.taskList.length, text: newTaskContent};
-        //   container.taskList = [newTask].concat(container.taskList);
-        // };
-
-        createTask(this.shadowRoot.querySelector('.input').textContent);
-
+        restApi.createTask(this.shadowRoot.querySelector('.input').textContent);
         this.shadowRoot.querySelector('.input').textContent = ''
       }
 

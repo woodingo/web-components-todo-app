@@ -14,7 +14,7 @@
     clickHandler() {
       this.classList.add('done');
       setTimeout(() => {
-        deleteTask(this.dataset.id);
+        restApi.deleteTask(this.dataset.id);
       }, 200);
     }
 
