@@ -1,0 +1,20 @@
+.wj-create-input {
+  display: block;
+}
+
+.input {
+  /* border: 1px solid silver; */
+  display: block;
+  border: none;
+  width: 100%;
+  background-color: white;
+  min-height: 1em;
+  padding: 15px 20px;
+  box-shadow: 0 0 20px rgba(66,66,144,0.1);
+  font-size: inherit;
+  color: inherit;
+}
+
+.input:focus {
+  outline: none;
+}

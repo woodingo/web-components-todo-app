@@ -1,0 +1,79 @@
+.wj-task {
+  display: block;
+  transition: background-color, .3s 0s;
+}
+
+.wj-task:hover {
+  transition: background-color, .3s 0s; 
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--checkboxes-bgcolor, gray);
+  margin-right: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .3s 0s;
+}
+
+.checkbox svg {
+  fill: white;
+  width: 10px;
+  height: 10px;
+  opacity: 0
+}
+
+.checkbox:hover {
+  background-color: var(--checkboxes-bgcolor-hover, gray);
+  transition: background-color .3s 0s;
+}
+
+.checkbox:hover svg {
+  opacity: 1
+}
+
+.text {
+  position: relative;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@keyframes strikethrough {
+  from {width: 0%;}
+  to {width: 100%;}
+}
+
+@keyframes hide {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+.wj-task.done {
+  animation-name: hide;
+  animation-duration: .2s;
+  animation-delay: .3s;
+  animation-fill-mode: forwards;
+}
+
+.wj-task.done .text:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid;
+  animation-name: strikethrough;
+  animation-duration: .2s;
+}

@@ -28,7 +28,7 @@ class restApiClass {
   
 
   logIn() {
-    fetch(`${this.apiUrl}/api/auth/login`, { method: 'POST', headers: this.getHeaders(true), body: JSON.stringify({"username":"woody","password":"fall35"}) })
+    fetch(`${this.apiUrl}/api/auth/login`, { method: 'POST', headers: this.getHeaders(true), body: JSON.stringify({"username":"woody","password":"123"}) })
     .then(response => {
       response.json().then(json => {
         localStorage.setItem('token', json['access_token']);
@@ -37,44 +37,19 @@ class restApiClass {
   }
 
   getTasks() {
-    fetch(`${this.apiUrl}/api/db/tasks`, { method: 'GET', headers: this.getHeaders() })
-    .then(response => {
-      if (response.status === 401) {
-        this.logIn();
-      } else {
-        response.json().then(json => {
-          document.querySelector('.list').taskList = json.data;
-        });
-      }
-    })
+    return fetch(`${this.apiUrl}/api/db/tasks`, { method: 'GET', headers: this.getHeaders() })
   }
 
   createTask(taskName) {
-    fetch(`${this.apiUrl}/api/db/tasks`, { method: 'POST', headers: this.getHeaders(false, 'application/json'), body: JSON.stringify({ name: taskName}) })
-    .then(response => {
-      if (response.status === 401) {
-        this.logIn();
-      } else {
-        response.json().then(json => {
-          this.getTasks();
-        })
-      }
-    })
+    return fetch(`${this.apiUrl}/api/db/tasks`, { method: 'POST', headers: this.getHeaders(false, 'application/json'), body: JSON.stringify({ name: taskName}) })
   }
 
   deleteTask(id) {
-    fetch(`${this.apiUrl}/api/db/tasks/${id}`, { method: 'DELETE', headers: this.getHeaders() })
-    .then(response => {
-      if (response.status === 401) {
-        this.logIn();
-      } else {
-        response.json().then(json => {
-          this.getTasks();
-        })
-      }
-    })
+    return fetch(`${this.apiUrl}/api/db/tasks/${id}`, { method: 'DELETE', headers: this.getHeaders() })
   }
 }
 
 const restApi = new restApiClass('http://api-factory.simbirsoft', '59ff539df8a7ab6dcdf97892', 'd002586a8e', localStorage['token']);
+export default restApi;
+
 
